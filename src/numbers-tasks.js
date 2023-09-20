@@ -220,22 +220,6 @@ function toNumber(/* value, def */) {
 }
 
 /**
- * Returns the given number rounded to the nearest integer.
- *
- * @param {number} num
- * @return {number}
- *
- * @example:
- *   1.2  => 1
- *   3.8  => 4
- *   0.5  => 1
- *   -0.5 => -1
- */
-function roundToNearestInteger(/* num */) {
-  throw new Error('Not implemented');
-}
-
-/**
  * Returns the cube of the given number.
  *
  * @param {number} num
@@ -326,6 +310,205 @@ function getSine(/* num */) {
   throw new Error('Not implemented');
 }
 
+/**
+* Returns a string representation of a number in a specified base (radix).
+*
+* @param {number} number
+* @param {number} base
+* @return {string}
+*
+* @example:
+* 255, 16 => 'ff'
+* 2, 2    => '10'
+*/
+function numberToStringInBase(/* number, base */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a string representation of a number in exponential notation.
+*
+* @param {number} number
+* @param {number} fractionDigits
+* @return {string}
+*
+* @example:
+* 12345, 2    => '1.23e+4'
+*/
+function toExponential(/* number, fractionDigits */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a string representation of a number in fixed-point notation.
+*
+* @param {number} number
+* @param {number} fractionDigits
+* @return {string}
+*
+* @example:
+* 12345, 2    => '12345.00'
+* 12.345, 1   => '12.3'
+*/
+function toFixed(/* number, fractionDigits */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a string representation of a number in normal (fixed-point or exponential)
+* notation rounded to precision significant digits.
+*
+* @param {number} number
+* @param {number} precision
+* @return {string}
+*
+* @example:
+* 12345, 7    => '12345.00'
+* 12.345, 4   => '12.35'
+*/
+function toPrecision(/* number, precision */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the primitive value of a Number object.
+*
+* @param {Number} number
+* @return {number}
+*
+* @example:
+* new Number(5) => 5
+* Number(-5)    => -5
+*/
+function getNumberValue(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a boolean value indicating whether a number or not.
+*
+* @param {number} number
+* @return {boolean}
+*
+* @example:
+* Infinity => false
+* NaN      => false
+* 0        => true
+* 'a' / 1  => false
+* 'a'      => false
+* 5        => true
+* '5'      => false
+*/
+function isNumber(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a boolean value indicating whether a number is an integer or not.
+*
+* @param {number} number
+* @return {boolean}
+*
+* @example:
+* 5    => true
+* 5.1  => false
+* '5'  => false
+*/
+function isInteger(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a floating point number or, if the number cannot be parsed from the argument, returns NaN.
+*
+* @param {string} str
+* @return {number | NaN}
+*
+* @example:
+* '4.567abcdefgh' => 4.567
+* 'abcdefgh' => NaN
+*/
+function getFloatOnString(/* str */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns an integer of the specified base or, if the number cannot be parsed
+* from the argument, returns NaN.
+*
+* @param {string} str
+* @param {number} base
+* @return {number | NaN}
+*
+* @example:
+* '4.567abcdefgh', 10  => 4
+* 'abcdefgh', 10       => NaN
+* '1.234', 2           => 1
+* '10', 8              => 1
+*/
+function getIntegerOnString(/* str, base */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the smallest integer less than or equal to a given number.
+*
+* @param {number} number
+* @return {number}
+*
+* @example:
+* 5.9 => 5
+* -5.1 => -6
+*/
+function roundToSmallestInteger(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the largest integer greater than or equal to a given number.
+*
+* @param {number} number
+* @return {number}
+*
+* @example:
+* 5.1 => 6
+* -5.9 => -5
+*/
+function roundToLargestInteger(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the value of a number rounded to the nearest integer.
+*
+* @param {number} number
+* @return {number}
+*
+* @example:
+* 5.5 => 6
+* 5.4 => 5
+* -5.5 => -5
+*/
+function roundToNearestInteger(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the integer part of a number by removing any fractional digits.
+*
+* @param {number} number
+* @return {number}
+*
+* @example:
+* 5.5 => 5
+* 5.4 => 5
+* -5.5 => -5
+*/
+function getIntegerPartNumber(number) {
+  // throw new Error('Not implemented');
+  return Math.trunc(number);
+}
+
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
@@ -339,11 +522,24 @@ module.exports = {
   roundToPowerOfTen,
   isPrime,
   toNumber,
-  roundToNearestInteger,
   getCube,
   getFibonacciNumber,
   getSumToN,
   getSumOfDigits,
   isPowerOfTwo,
   getSine,
+
+  numberToStringInBase,
+  roundToLargestInteger,
+  roundToSmallestInteger,
+  roundToNearestInteger,
+  isNumber,
+  isInteger,
+  toExponential,
+  toFixed,
+  toPrecision,
+  getNumberValue,
+  getFloatOnString,
+  getIntegerOnString,
+  getIntegerPartNumber,
 };
