@@ -426,7 +426,7 @@ function isInteger(/* number */) {
 *
 * @example:
 * '4.567abcdefgh' => 4.567
-* 'abcdefgh' => NaN
+* 'abcdefgh'      => NaN
 */
 function getFloatOnString(/* str */) {
   throw new Error('Not implemented');
@@ -457,7 +457,7 @@ function getIntegerOnString(/* str, base */) {
 * @return {number}
 *
 * @example:
-* 5.9 => 5
+* 5.9  => 5
 * -5.1 => -6
 */
 function roundToSmallestInteger(/* number */) {
@@ -471,7 +471,7 @@ function roundToSmallestInteger(/* number */) {
 * @return {number}
 *
 * @example:
-* 5.1 => 6
+* 5.1  => 6
 * -5.9 => -5
 */
 function roundToLargestInteger(/* number */) {
@@ -485,8 +485,8 @@ function roundToLargestInteger(/* number */) {
 * @return {number}
 *
 * @example:
-* 5.5 => 6
-* 5.4 => 5
+* 5.5  => 6
+* 5.4  => 5
 * -5.5 => -5
 */
 function roundToNearestInteger(/* number */) {
@@ -500,13 +500,75 @@ function roundToNearestInteger(/* number */) {
 * @return {number}
 *
 * @example:
-* 5.5 => 5
-* 5.4 => 5
+* 5.5  => 5
+* 5.4  => 5
 * -5.5 => -5
 */
-function getIntegerPartNumber(number) {
-  // throw new Error('Not implemented');
-  return Math.trunc(number);
+function getIntegerPartNumber(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the largest number.
+*
+* @param {number} firstNumber
+* @param {number} secondNumber
+* @return {number}
+*
+* @example:
+* 1, 2   => 2
+* -5, -6 => -5
+* 0, 5   => 5
+*/
+function getMaxNumber(/* firstNumber, secondNumber */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns a random integer in the range from min to max.
+*
+* @param {number} min
+* @param {number} max
+* @return {number}
+*
+* @example:
+* 1, 2  => 1 | 2
+* -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
+* -1, 1 => -1 | 0 | 1
+*/
+function getRandomInteger(/* min, max */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the length of the hypotenuse of a right triangle.
+*
+* @param {number} a
+* @param {number} b
+* @return {number}
+*
+* @example:
+* 3, 4 => 5
+*/
+function getHypotenyse(/* a, b */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns count of not even numbers from zero to the resulting number.
+* The resulting number is taken into account.
+*
+* @param {number} number
+* @return {number}
+*
+* @example:
+* 4  => 2
+* 5  => 3
+* 10 => 5
+* 15 => 8
+*/
+function getCountNotEvenNumber(/* number */) {
+  throw new Error('Not implemented');
 }
 
 module.exports = {
@@ -528,7 +590,6 @@ module.exports = {
   getSumOfDigits,
   isPowerOfTwo,
   getSine,
-
   numberToStringInBase,
   roundToLargestInteger,
   roundToSmallestInteger,
@@ -542,4 +603,8 @@ module.exports = {
   getFloatOnString,
   getIntegerOnString,
   getIntegerPartNumber,
+  getMaxNumber,
+  getRandomInteger,
+  getHypotenyse,
+  getCountNotEvenNumber,
 };

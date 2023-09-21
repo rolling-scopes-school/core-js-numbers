@@ -167,6 +167,7 @@ describe('02-numbers-tasks', () => {
 
   it.optional('getNumberValue returns the primitive value of a Number object', () => {
     assert.equal(tasks.getNumberValue(Number(5)), 5);
+    // eslint-disable-next-line no-new-wrappers
     assert.equal(tasks.getNumberValue(new Number(-5)), -5);
   });
 
@@ -225,67 +226,111 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToNearestInteger(5.4), 5);
     assert.equal(tasks.roundToNearestInteger(-5.5), -5);
   });
+
+  it.optional('getMaxNumber returns the largest number', () => {
+    assert.equal(tasks.getMaxNumber(1, 2), 2);
+    assert.equal(tasks.getMaxNumber(-5, -6), -5);
+    assert.equal(tasks.getMaxNumber(0, 5), 5);
+  });
+
+  it.optional('getRandomInteger returns a random integer in the range from min to max', () => {
+    for (let i = 0; i < 10; i += 1) {
+      const min = Math.floor(Math.random() * 10);
+      const max = Math.floor(Math.random() * 10 + min + 1);
+      const result = tasks.getRandomInteger(min, max);
+      assert.equal(min <= result && result <= max, true);
+    }
+  });
+
+  it.optional('getHypotenyse returns the length of the hypotenuse of a right triangle', () => {
+    assert.equal(tasks.getHypotenyse(3, 4), 5);
+    assert.equal(tasks.getHypotenyse(5, 6).toPrecision(14), 7.8102496759067);
+    assert.equal(tasks.getHypotenyse(Number.MAX_VALUE, 6), 1.7976931348623157e+308);
+  });
+
+  it.optional('getCountNotEvenNumber returns count of not even numbers from zero to the resulting number', () => {
+    assert.equal(tasks.getCountNotEvenNumber(4), 2);
+    assert.equal(tasks.getCountNotEvenNumber(5), 3);
+    assert.equal(tasks.getCountNotEvenNumber(10), 5);
+    assert.equal(tasks.getCountNotEvenNumber(15), 8);
+    assert.equal(tasks.getCountNotEvenNumber(-4), 2);
+    assert.equal(tasks.getCountNotEvenNumber(-5), 3);
+    assert.equal(tasks.getCountNotEvenNumber(-10), 5);
+    assert.equal(tasks.getCountNotEvenNumber(-15), 8);
+  });
 });
 
 describe('02-numbers-tasks optimal implementation tests', () => {
   it.optional('optimal implementation of getCube', () => {
-    assert.equal(tasks.getCube.toString().includes('**'), true);
+    assert.equal(tasks.getCube.toString().includes('**'), true, 'should use **');
   });
 
   it.optional('optimal implementation of getSine', () => {
-    assert.equal(tasks.getSine.toString().includes('Math.sin'), true);
+    assert.equal(tasks.getSine.toString().includes('Math.sin'), true, 'should use Math.sin');
   });
 
   it.optional('optimal implementation of numberToStringInBase', () => {
-    assert.equal(tasks.numberToStringInBase.toString().includes('toString(base)'), true);
+    assert.equal(tasks.numberToStringInBase.toString().includes('toString(base)'), true, 'should use Number.toString');
   });
 
   it.optional('optimal implementation of toExponential', () => {
-    assert.equal(tasks.toExponential.toString().includes('toExponential(fractionDigits)'), true);
+    assert.equal(tasks.toExponential.toString().includes('toExponential(fractionDigits)'), true, 'should use Number.toExponential');
   });
 
   it.optional('optimal implementation of toFixed', () => {
-    assert.equal(tasks.toFixed.toString().includes('toFixed(fractionDigits)'), true);
+    assert.equal(tasks.toFixed.toString().includes('toFixed(fractionDigits)'), true, 'should use Number.toFixed');
   });
 
   it.optional('optimal implementation of toPrecision', () => {
-    assert.equal(tasks.toPrecision.toString().includes('toPrecision(precision)'), true);
+    assert.equal(tasks.toPrecision.toString().includes('toPrecision(precision)'), true, 'should use Number.toPrecision');
   });
 
   it.optional('optimal implementation of getNumberValue', () => {
-    assert.equal(tasks.getNumberValue.toString().includes('.valueOf()'), true);
+    assert.equal(tasks.getNumberValue.toString().includes('.valueOf()'), true, 'should use Number.valueOf');
   });
 
   it.optional('optimal implementation of isNumber', () => {
-    assert.equal(tasks.isNumber.toString().includes('.isFinite'), true);
-    assert.equal(tasks.isNumber.toString().includes('.isNaN'), true);
+    assert.equal(tasks.isNumber.toString().includes('.isFinite'), true, 'should use Number.isFinite');
+    assert.equal(tasks.isNumber.toString().includes('.isNaN'), true, 'should use Number.isNaN');
   });
 
   it.optional('optimal implementation of isInteger', () => {
-    assert.equal(tasks.isInteger.toString().includes('.isInteger(number)'), true);
+    assert.equal(tasks.isInteger.toString().includes('.isInteger(number)'), true, 'should use Number.isInteger');
   });
 
   it.optional('optimal implementation of getFloatOnString', () => {
-    assert.equal(tasks.getFloatOnString.toString().includes('.parseFloat(str)'), true);
+    assert.equal(tasks.getFloatOnString.toString().includes('.parseFloat(str)'), true, 'should use Number.parseFloat');
   });
 
   it.optional('optimal implementation of getIntegerOnString', () => {
-    assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true);
+    assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true, 'should use Number.parseInt');
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {
-    assert.equal(tasks.roundToSmallestInteger.toString().includes('Math.floor'), true);
+    assert.equal(tasks.roundToSmallestInteger.toString().includes('Math.floor'), true, 'should use Math.floor');
   });
 
   it.optional('optimal implementation of roundToLargestInteger', () => {
-    assert.equal(tasks.roundToLargestInteger.toString().includes('Math.ceil'), true);
+    assert.equal(tasks.roundToLargestInteger.toString().includes('Math.ceil'), true, 'should use Math.ceil');
   });
 
   it.optional('optimal implementation of roundToNearestInteger', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.round'), true);
+    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.round'), true, 'should use Math.round');
   });
 
   it.optional('optimal implementation of getIntegerPartNumber', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.trunc'), true);
+    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.trunc'), true, 'should use Math.trunc');
+  });
+
+  it.optional('optimal implementation of getMaxNumber', () => {
+    assert.equal(tasks.getMaxNumber.toString().includes('Math.max'), true, 'should use Math.max');
+  });
+
+  it.optional('optimal implementation of getHypotenyse', () => {
+    assert.equal(tasks.getHypotenyse.toString().includes('Math.hypot'), true, 'should use Math.hypot');
+  });
+
+  it.optional('optimal implementation of getCountNotEvenNumber', () => {
+    assert.equal(tasks.getCountNotEvenNumber.toString().includes('%'), true, 'should use % to get the remainder of the division');
   });
 });
