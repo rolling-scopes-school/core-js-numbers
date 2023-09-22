@@ -205,6 +205,12 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerOnString('10', 8), 8);
   });
 
+  it.optional('hasSaveInteger returns whether a number is a safe integer', () => {
+    assert.equal(tasks.hasSaveInteger(10), true);
+    assert.equal(tasks.hasSaveInteger(3.5), false);
+    assert.equal(tasks.hasSaveInteger(2 ** 53), false);
+  });
+
   it.optional('roundToSmallestInteger returns the largest integer less than or equal to a given number', () => {
     assert.equal(tasks.roundToSmallestInteger(5.9), 5);
     assert.equal(tasks.roundToSmallestInteger(-5.1), -6);
@@ -225,6 +231,11 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToNearestInteger(5.5), 5);
     assert.equal(tasks.roundToNearestInteger(5.4), 5);
     assert.equal(tasks.roundToNearestInteger(-5.5), -5);
+  });
+
+  it.optional('getSummNumber returns the sum of numbers', () => {
+    assert.equal(tasks.getSummNumber(1, 2, 3), 6);
+    assert.equal(tasks.getSummNumber(0.1, 0.2, 0.3), 0.6);
   });
 
   it.optional('getMaxNumber returns the largest number', () => {
@@ -260,7 +271,7 @@ describe('02-numbers-tasks', () => {
   });
 });
 
-describe('02-numbers-tasks optimal implementation tests', () => {
+describe('02-numbers-tasks optimal implementation', () => {
   it.optional('optimal implementation of getCube', () => {
     assert.equal(tasks.getCube.toString().includes('**'), true, 'should use **');
   });
@@ -304,6 +315,10 @@ describe('02-numbers-tasks optimal implementation tests', () => {
 
   it.optional('optimal implementation of getIntegerOnString', () => {
     assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true, 'should use Number.parseInt');
+  });
+
+  it.optional('optimal implementation of hasSaveInteger', () => {
+    assert.equal(tasks.hasSaveInteger.toString().includes('.isSaveInteger'), true, 'should use Number.isSaveInteger');
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {

@@ -451,6 +451,21 @@ function getIntegerOnString(/* str, base */) {
 }
 
 /**
+* Returns whether a number is a safe integer.
+*
+* @param {number} number
+* @return {boolean}
+*
+* @example:
+* 10       => true
+* 3.5      => false
+* 2 ** 53  => false
+*/
+function hasSaveInteger(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
 * Returns the smallest integer less than or equal to a given number.
 *
 * @param {number} number
@@ -505,6 +520,22 @@ function roundToNearestInteger(/* number */) {
 * -5.5 => -5
 */
 function getIntegerPartNumber(/* number */) {
+  throw new Error('Not implemented');
+}
+
+/**
+* Returns the sum of numbers.
+*
+* @param {number} x1
+* @param {number} x2
+* @param {number} x3
+* @returns {number}
+*
+* @example:
+* 1, 2, 3       => 6
+* 0.1, 0.2, 0.3 => 0.6
+*/
+function getSummNumber(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
 
@@ -591,9 +622,11 @@ module.exports = {
   isPowerOfTwo,
   getSine,
   numberToStringInBase,
+  hasSaveInteger,
   roundToLargestInteger,
   roundToSmallestInteger,
   roundToNearestInteger,
+  getSummNumber,
   isNumber,
   isInteger,
   toExponential,
