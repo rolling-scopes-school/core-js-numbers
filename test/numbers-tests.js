@@ -228,9 +228,9 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('getIntegerPartNumber returns the integer part of a number by removing any fractional digits', () => {
-    assert.equal(tasks.roundToNearestInteger(5.5), 5);
-    assert.equal(tasks.roundToNearestInteger(5.4), 5);
-    assert.equal(tasks.roundToNearestInteger(-5.5), -5);
+    assert.equal(tasks.getIntegerPartNumber(5.5), 5);
+    assert.equal(tasks.getIntegerPartNumber(5.4), 5);
+    assert.equal(tasks.getIntegerPartNumber(-5.5), -5);
   });
 
   it.optional('getSummNumber returns the sum of numbers', () => {
@@ -276,6 +276,10 @@ describe('02-numbers-tasks optimal implementation', () => {
     assert.equal(tasks.getCube.toString().includes('**'), true, 'should use **');
   });
 
+  it.optional('optimal implementation of getSumOfDigits', () => {
+    assert.equal(tasks.getSumOfDigits.toString().includes('toString'), false, 'should not use toString');
+  });
+
   it.optional('optimal implementation of getSine', () => {
     assert.equal(tasks.getSine.toString().includes('Math.sin'), true, 'should use Math.sin');
   });
@@ -318,7 +322,7 @@ describe('02-numbers-tasks optimal implementation', () => {
   });
 
   it.optional('optimal implementation of hasSaveInteger', () => {
-    assert.equal(tasks.hasSaveInteger.toString().includes('.isSaveInteger'), true, 'should use Number.isSaveInteger');
+    assert.equal(tasks.hasSaveInteger.toString().includes('.isSafeInteger'), true, 'should use Number.isSafeInteger');
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {
@@ -334,7 +338,7 @@ describe('02-numbers-tasks optimal implementation', () => {
   });
 
   it.optional('optimal implementation of getIntegerPartNumber', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.trunc'), true, 'should use Math.trunc');
+    assert.equal(tasks.getIntegerPartNumber.toString().includes('Math.trunc'), true, 'should use Math.trunc');
   });
 
   it.optional('optimal implementation of getMaxNumber', () => {
