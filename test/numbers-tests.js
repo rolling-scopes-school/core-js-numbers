@@ -205,10 +205,10 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerOnString('10', 8), 8);
   });
 
-  it.optional('hasSaveInteger returns whether a number is a safe integer', () => {
-    assert.equal(tasks.hasSaveInteger(10), true);
-    assert.equal(tasks.hasSaveInteger(3.5), false);
-    assert.equal(tasks.hasSaveInteger(2 ** 53), false);
+  it.optional('isSaveInteger returns whether a number is a safe integer', () => {
+    assert.equal(tasks.isSaveInteger(10), true);
+    assert.equal(tasks.isSaveInteger(3.5), false);
+    assert.equal(tasks.isSaveInteger(2 ** 53), false);
   });
 
   it.optional('roundToSmallestInteger returns the largest integer less than or equal to a given number', () => {
@@ -233,9 +233,9 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerPartNumber(-5.5), -5);
   });
 
-  it.optional('getSummNumber returns the sum of numbers', () => {
-    assert.equal(tasks.getSummNumber(1, 2, 3), 6);
-    assert.equal(tasks.getSummNumber(0.1, 0.2, 0.3), 0.6);
+  it.optional('getSummOfNumber returns the sum of numbers', () => {
+    assert.equal(tasks.getSummOfNumber(1, 2, 3), 6);
+    assert.equal(tasks.getSummOfNumber(0.1, 0.2, 0.3), 0.6);
   });
 
   it.optional('getMaxNumber returns the largest number', () => {
@@ -253,10 +253,10 @@ describe('02-numbers-tasks', () => {
     }
   });
 
-  it.optional('getHypotenyse returns the length of the hypotenuse of a right triangle', () => {
-    assert.equal(tasks.getHypotenyse(3, 4), 5);
-    assert.equal(tasks.getHypotenyse(5, 6).toPrecision(14), 7.8102496759067);
-    assert.equal(tasks.getHypotenyse(Number.MAX_VALUE, 6), 1.7976931348623157e+308);
+  it.optional('getHypotenuse returns the length of the hypotenuse of a right triangle', () => {
+    assert.equal(tasks.getHypotenuse(3, 4), 5);
+    assert.equal(tasks.getHypotenuse(5, 6).toPrecision(14), 7.8102496759067);
+    assert.equal(tasks.getHypotenuse(Number.MAX_VALUE, 6), 1.7976931348623157e+308);
   });
 
   it.optional('getCountNotEvenNumber returns count of not even numbers from zero to the resulting number', () => {
@@ -321,8 +321,8 @@ describe('02-numbers-tasks optimal implementation', () => {
     assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true, 'should use Number.parseInt');
   });
 
-  it.optional('optimal implementation of hasSaveInteger', () => {
-    assert.equal(tasks.hasSaveInteger.toString().includes('.isSafeInteger'), true, 'should use Number.isSafeInteger');
+  it.optional('optimal implementation of isSaveInteger', () => {
+    assert.equal(tasks.isSaveInteger.toString().includes('.isSafeInteger'), true, 'should use Number.isSafeInteger');
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {
@@ -345,8 +345,8 @@ describe('02-numbers-tasks optimal implementation', () => {
     assert.equal(tasks.getMaxNumber.toString().includes('Math.max'), true, 'should use Math.max');
   });
 
-  it.optional('optimal implementation of getHypotenyse', () => {
-    assert.equal(tasks.getHypotenyse.toString().includes('Math.hypot'), true, 'should use Math.hypot');
+  it.optional('optimal implementation of getHypotenuse', () => {
+    assert.equal(tasks.getHypotenuse.toString().includes('Math.hypot'), true, 'should use Math.hypot');
   });
 
   it.optional('optimal implementation of getCountNotEvenNumber', () => {

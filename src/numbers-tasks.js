@@ -385,7 +385,7 @@ function getNumberValue(/* number */) {
 }
 
 /**
-* Returns a boolean value indicating whether a number or not.
+* Returns a boolean value indicating whether the parameter is a number or not.
 *
 * @param {number} number
 * @return {boolean}
@@ -461,7 +461,7 @@ function getIntegerOnString(/* str, base */) {
 * 3.5      => false
 * 2 ** 53  => false
 */
-function hasSaveInteger(/* number */) {
+function isSaveInteger(/* number */) {
   throw new Error('Not implemented');
 }
 
@@ -535,7 +535,7 @@ function getIntegerPartNumber(/* number */) {
 * 1, 2, 3       => 6
 * 0.1, 0.2, 0.3 => 0.6
 */
-function getSummNumber(/* x1, x2, x3 */) {
+function getSummOfNumber(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
 
@@ -581,12 +581,12 @@ function getRandomInteger(/* min, max */) {
 * @example:
 * 3, 4 => 5
 */
-function getHypotenyse(/* a, b */) {
+function getHypotenuse(/* a, b */) {
   throw new Error('Not implemented');
 }
 
 /**
-* Returns count of not even numbers from zero to the resulting number.
+* Returns count of odd numbers from zero to the resulting number.
 * The resulting number is taken into account.
 *
 * @param {number} number
@@ -622,11 +622,11 @@ module.exports = {
   isPowerOfTwo,
   getSine,
   numberToStringInBase,
-  hasSaveInteger,
+  isSaveInteger,
   roundToLargestInteger,
   roundToSmallestInteger,
   roundToNearestInteger,
-  getSummNumber,
+  getSummOfNumber,
   isNumber,
   isInteger,
   toExponential,
@@ -638,6 +638,6 @@ module.exports = {
   getIntegerPartNumber,
   getMaxNumber,
   getRandomInteger,
-  getHypotenyse,
+  getHypotenuse,
   getCountNotEvenNumber,
 };
