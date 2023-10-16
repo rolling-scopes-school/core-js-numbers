@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/rolling-scopes-school/core-js-numbers.git"
   },
-  "author": "aorgish, mikhama, valerydluski",
+  "author": "mikaleinik, valerydluski",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^6.6.0",
