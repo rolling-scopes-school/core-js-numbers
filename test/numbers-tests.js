@@ -2,7 +2,7 @@ const assert = require('assert');
 const tasks = require('../src/numbers-tasks');
 it.optional = require('../extensions/it-optional');
 
-describe('02-numbers-tasks', () => {
+describe('core-js-numbers', () => {
   it.optional('getRectangleArea should return a square of rectangle', () => {
     assert.equal(tasks.getRectangleArea(5, 10), 50);
     assert.equal(tasks.getRectangleArea(5, 5), 25);
@@ -44,6 +44,7 @@ describe('02-numbers-tasks', () => {
   it.optional('getLastDigit should return a last digit of the number', () => {
     assert.equal(tasks.getLastDigit(100), 0);
     assert.equal(tasks.getLastDigit(37), 7);
+    assert.equal(tasks.getLastDigit(11), 1);
     assert.equal(tasks.getLastDigit(5), 5);
     assert.equal(tasks.getLastDigit(0), 0);
   });
@@ -73,20 +74,20 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isPrime should return true if specified number is prime', () => {
-    assert.equal(tasks.isPrime(2), true, '2');
-    assert.equal(tasks.isPrime(3), true, '3');
-    assert.equal(tasks.isPrime(4), false, '4');
-    assert.equal(tasks.isPrime(5), true, '5');
-    assert.equal(tasks.isPrime(6), false, '6');
-    assert.equal(tasks.isPrime(7), true, '7');
-    assert.equal(tasks.isPrime(8), false, '8');
-    assert.equal(tasks.isPrime(9), false, '9');
-    assert.equal(tasks.isPrime(10), false, '10');
-    assert.equal(tasks.isPrime(11), true, '11');
-    assert.equal(tasks.isPrime(12), false, '12');
-    assert.equal(tasks.isPrime(13), true, '13');
-    assert.equal(tasks.isPrime(113), true, '113');
-    assert.equal(tasks.isPrime(119), false, '119');
+    assert.equal(tasks.isPrime(2), true, 'number 2 is prime');
+    assert.equal(tasks.isPrime(3), true, 'number 3 is prime');
+    assert.equal(tasks.isPrime(4), false, '4 is not a prime number');
+    assert.equal(tasks.isPrime(5), true, 'number 5 is prime');
+    assert.equal(tasks.isPrime(6), false, '6 is not a prime number');
+    assert.equal(tasks.isPrime(7), true, 'number 7 is prime');
+    assert.equal(tasks.isPrime(8), false, '8 is not a prime number');
+    assert.equal(tasks.isPrime(9), false, '9 is not a prime number');
+    assert.equal(tasks.isPrime(10), false, '10 is not a prime number');
+    assert.equal(tasks.isPrime(11), true, 'number 11 is prime');
+    assert.equal(tasks.isPrime(12), false, '12 is not a prime number');
+    assert.equal(tasks.isPrime(13), true, 'number 13 is prime');
+    assert.equal(tasks.isPrime(113), true, 'number 113 is prime');
+    assert.equal(tasks.isPrime(119), false, '119 is not a prime number');
   });
 
   it.optional('toNumber should convert any value to number or return the default', () => {
@@ -127,11 +128,11 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isPowerOfTwo returns true if the given number is a power of two, false otherwise', () => {
-    assert.equal(tasks.isPowerOfTwo(4), true);
-    assert.equal(tasks.isPowerOfTwo(16), true);
-    assert.equal(tasks.isPowerOfTwo(15), false);
-    assert.equal(tasks.isPowerOfTwo(-512), true);
-    assert.equal(tasks.isPowerOfTwo(1000), false);
+    assert.equal(tasks.isPowerOfTwo(4), true, 'the value 4 is a power of 2');
+    assert.equal(tasks.isPowerOfTwo(16), true, 'the value 16 is a power of 2');
+    assert.equal(tasks.isPowerOfTwo(15), false, 'the value 15 is not a power of 2');
+    assert.equal(tasks.isPowerOfTwo(512), true, 'the value 512 is a power of 2');
+    assert.equal(tasks.isPowerOfTwo(1000), false, 'the value 1000 is not a power of 2');
   });
 
   it.optional('getSine the sine of a number', () => {
@@ -172,24 +173,24 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isNumber returns a boolean value indicating whether a number or not', () => {
-    assert.equal(tasks.isNumber(Infinity), false);
-    assert.equal(tasks.isNumber(NaN), false);
-    assert.equal(tasks.isNumber(0), true);
-    assert.equal(tasks.isNumber('a' / 1), false);
-    assert.equal(tasks.isNumber('a'), false);
-    assert.equal(tasks.isNumber(5), true);
-    assert.equal(tasks.isNumber('5'), false);
-    assert.equal(tasks.isNumber(null), false);
-    assert.equal(tasks.isNumber(''), false);
-    assert.equal(tasks.isNumber(true), false);
-    assert.equal(tasks.isNumber(10), true);
+    assert.equal(tasks.isNumber(Infinity), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(NaN), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(0), true, 'value 0 is a number');
+    assert.equal(tasks.isNumber('a' / 1), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber('a'), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(5), true, 'value 5 is a number');
+    assert.equal(tasks.isNumber('5'), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(null), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(''), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(true), false, 'value 10 is not a number');
+    assert.equal(tasks.isNumber(10), true, 'value 10 is a number');
   });
 
   it.optional('isInteger returns a boolean value indicating whether a number is an integer or not', () => {
-    assert.equal(tasks.isInteger(5), true);
-    assert.equal(tasks.isInteger(5.1), false);
-    assert.equal(tasks.isInteger('5'), false);
-    assert.equal(tasks.isInteger(3 / 2), false);
+    assert.equal(tasks.isInteger(5), true, 'value 5 is an integer');
+    assert.equal(tasks.isInteger(5.1), false, 'value 5.1 is not an integer');
+    assert.equal(tasks.isInteger('5'), false, 'value 3/2 is not an integer');
+    assert.equal(tasks.isInteger(3 / 2), false, 'value 3/2 is not an integer');
   });
 
   it.optional('getFloatOnString a floating point number or NaN', () => {
@@ -205,10 +206,10 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerOnString('10', 8), 8);
   });
 
-  it.optional('isSaveInteger returns whether a number is a safe integer', () => {
-    assert.equal(tasks.isSaveInteger(10), true);
-    assert.equal(tasks.isSaveInteger(3.5), false);
-    assert.equal(tasks.isSaveInteger(2 ** 53), false);
+  it.optional('isSafeInteger returns whether a number is a safe integer', () => {
+    assert.equal(tasks.isSafeInteger(10), true, 'value 10 is a safe integer');
+    assert.equal(tasks.isSafeInteger(3.5), false, 'value 3.5 is not a safe integer');
+    assert.equal(tasks.isSafeInteger(2 ** 53), false, 'value 2**53 is not a safe integer');
   });
 
   it.optional('roundToSmallestInteger returns the largest integer less than or equal to a given number', () => {
@@ -233,9 +234,9 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerPartNumber(-5.5), -5);
   });
 
-  it.optional('getSummOfNumber returns the sum of numbers', () => {
-    assert.equal(tasks.getSummOfNumber(1, 2, 3), 6);
-    assert.equal(tasks.getSummOfNumber(0.1, 0.2, 0.3), 0.6);
+  it.optional('getSumOfNumbers returns the sum of numbers', () => {
+    assert.equal(tasks.getSumOfNumbers(1, 2, 3), 6);
+    assert.equal(tasks.getSumOfNumbers(0.1, 0.2, 0.3), 0.6);
   });
 
   it.optional('getMaxNumber returns the largest number', () => {
@@ -249,7 +250,7 @@ describe('02-numbers-tasks', () => {
       const min = Math.floor(Math.random() * 10);
       const max = Math.floor(Math.random() * 10 + min + 1);
       const result = tasks.getRandomInteger(min, max);
-      assert.equal(min <= result && result <= max, true);
+      assert.equal(min <= result && result <= max, true, `the ${result} is not in the range from ${min} to ${max}`);
     }
   });
 
@@ -259,97 +260,177 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getHypotenuse(Number.MAX_VALUE, 6), 1.7976931348623157e+308);
   });
 
-  it.optional('getCountNotEvenNumber returns count of not even numbers from zero to the resulting number', () => {
-    assert.equal(tasks.getCountNotEvenNumber(4), 2);
-    assert.equal(tasks.getCountNotEvenNumber(5), 3);
-    assert.equal(tasks.getCountNotEvenNumber(10), 5);
-    assert.equal(tasks.getCountNotEvenNumber(15), 8);
-    assert.equal(tasks.getCountNotEvenNumber(-4), 2);
-    assert.equal(tasks.getCountNotEvenNumber(-5), 3);
-    assert.equal(tasks.getCountNotEvenNumber(-10), 5);
-    assert.equal(tasks.getCountNotEvenNumber(-15), 8);
+  it.optional('getCountOfOddNumbers returns count of not even numbers from zero to the resulting number', () => {
+    assert.equal(tasks.getCountOfOddNumbers(4), 2);
+    assert.equal(tasks.getCountOfOddNumbers(5), 3);
+    assert.equal(tasks.getCountOfOddNumbers(10), 5);
+    assert.equal(tasks.getCountOfOddNumbers(15), 8);
+    assert.equal(tasks.getCountOfOddNumbers(-4), 2);
+    assert.equal(tasks.getCountOfOddNumbers(-5), 3);
+    assert.equal(tasks.getCountOfOddNumbers(-10), 5);
+    assert.equal(tasks.getCountOfOddNumbers(-15), 8);
   });
 });
 
-describe('02-numbers-tasks optimal implementation', () => {
+describe('core-js-numbers-tasks optimal implementation', () => {
   it.optional('optimal implementation of getCube', () => {
-    assert.equal(tasks.getCube.toString().includes('**'), true, 'should use **');
+    const fnStr = tasks.getCube.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('**'), true, 'should use **');
   });
 
   it.optional('optimal implementation of getSumOfDigits', () => {
-    assert.equal(tasks.getSumOfDigits.toString().includes('toString'), false, 'should not use toString');
+    const fnStr = tasks.getSumOfDigits.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('toString'), false, 'should not use toString');
   });
 
   it.optional('optimal implementation of getSine', () => {
-    assert.equal(tasks.getSine.toString().includes('Math.sin'), true, 'should use Math.sin');
+    const fnStr = tasks.getSine.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.sin'), true, 'should use Math.sin');
   });
 
   it.optional('optimal implementation of numberToStringInBase', () => {
-    assert.equal(tasks.numberToStringInBase.toString().includes('toString(base)'), true, 'should use Number.toString');
+    const fnStr = tasks.numberToStringInBase.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('toString(base)'), true, 'should use Number.toString');
   });
 
   it.optional('optimal implementation of toExponential', () => {
-    assert.equal(tasks.toExponential.toString().includes('toExponential(fractionDigits)'), true, 'should use Number.toExponential');
+    const fnStr = tasks.toExponential.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('toExponential(fractionDigits)'), true, 'should use Number.toExponential');
   });
 
   it.optional('optimal implementation of toFixed', () => {
-    assert.equal(tasks.toFixed.toString().includes('toFixed(fractionDigits)'), true, 'should use Number.toFixed');
+    const fnStr = tasks.toFixed.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('toFixed(fractionDigits)'), true, 'should use Number.toFixed');
   });
 
   it.optional('optimal implementation of toPrecision', () => {
-    assert.equal(tasks.toPrecision.toString().includes('toPrecision(precision)'), true, 'should use Number.toPrecision');
+    const fnStr = tasks.toPrecision.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('toPrecision(precision)'), true, 'should use Number.toPrecision');
   });
 
   it.optional('optimal implementation of getNumberValue', () => {
-    assert.equal(tasks.getNumberValue.toString().includes('.valueOf()'), true, 'should use Number.valueOf');
+    const fnStr = tasks.getNumberValue.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.valueOf()'), true, 'should use Number.valueOf');
   });
 
   it.optional('optimal implementation of isNumber', () => {
-    assert.equal(tasks.isNumber.toString().includes('.isFinite'), true, 'should use Number.isFinite');
-    assert.equal(tasks.isNumber.toString().includes('.isNaN'), true, 'should use Number.isNaN');
+    const fnStr = tasks.isNumber.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.isFinite'), true, 'should use Number.isFinite');
+    assert.equal(fnStr.includes('.isNaN'), true, 'should use Number.isNaN');
   });
 
   it.optional('optimal implementation of isInteger', () => {
-    assert.equal(tasks.isInteger.toString().includes('.isInteger(number)'), true, 'should use Number.isInteger');
+    const fnStr = tasks.isInteger.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.isInteger(number)'), true, 'should use Number.isInteger');
   });
 
   it.optional('optimal implementation of getFloatOnString', () => {
-    assert.equal(tasks.getFloatOnString.toString().includes('.parseFloat(str)'), true, 'should use Number.parseFloat');
+    const fnStr = tasks.getFloatOnString.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.parseFloat(str)'), true, 'should use Number.parseFloat');
   });
 
   it.optional('optimal implementation of getIntegerOnString', () => {
-    assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true, 'should use Number.parseInt');
+    const fnStr = tasks.getIntegerOnString.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.parseInt(str, base)'), true, 'should use Number.parseInt');
   });
 
-  it.optional('optimal implementation of isSaveInteger', () => {
-    assert.equal(tasks.isSaveInteger.toString().includes('.isSafeInteger'), true, 'should use Number.isSafeInteger');
+  it.optional('optimal implementation of isSafeInteger', () => {
+    const fnStr = tasks.isSafeInteger.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('.isSafeInteger'), true, 'should use Number.isSafeInteger');
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {
-    assert.equal(tasks.roundToSmallestInteger.toString().includes('Math.floor'), true, 'should use Math.floor');
+    const fnStr = tasks.roundToSmallestInteger.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.floor'), true, 'should use Math.floor');
   });
 
   it.optional('optimal implementation of roundToLargestInteger', () => {
-    assert.equal(tasks.roundToLargestInteger.toString().includes('Math.ceil'), true, 'should use Math.ceil');
+    const fnStr = tasks.roundToLargestInteger.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.ceil'), true, 'should use Math.ceil');
   });
 
   it.optional('optimal implementation of roundToNearestInteger', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.round'), true, 'should use Math.round');
+    const fnStr = tasks.roundToNearestInteger.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.round'), true, 'should use Math.round');
   });
 
   it.optional('optimal implementation of getIntegerPartNumber', () => {
-    assert.equal(tasks.getIntegerPartNumber.toString().includes('Math.trunc'), true, 'should use Math.trunc');
+    const fnStr = tasks.getIntegerPartNumber.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.trunc'), true, 'should use Math.trunc');
   });
 
   it.optional('optimal implementation of getMaxNumber', () => {
-    assert.equal(tasks.getMaxNumber.toString().includes('Math.max'), true, 'should use Math.max');
+    const fnStr = tasks.getMaxNumber.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.max'), true, 'should use Math.max');
   });
 
   it.optional('optimal implementation of getHypotenuse', () => {
-    assert.equal(tasks.getHypotenuse.toString().includes('Math.hypot'), true, 'should use Math.hypot');
+    const fnStr = tasks.getHypotenuse.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('Math.hypot'), true, 'should use Math.hypot');
   });
 
-  it.optional('optimal implementation of getCountNotEvenNumber', () => {
-    assert.equal(tasks.getCountNotEvenNumber.toString().includes('%'), true, 'should use % to get the remainder of the division');
+  it.optional('optimal implementation of getLastDigit', () => {
+    const fnStr = tasks.getLastDigit.toString();
+    if (!fnStr.includes('return')) {
+      this.skip();
+    }
+    assert.equal(fnStr.includes('%'), true, 'should use % to get the remainder of the division');
   });
 });
