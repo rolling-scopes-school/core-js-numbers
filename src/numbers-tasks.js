@@ -461,7 +461,7 @@ function getIntegerOnString(/* str, base */) {
 * 3.5      => false
 * 2 ** 53  => false
 */
-function isSaveInteger(/* number */) {
+function isSafeInteger(/* number */) {
   throw new Error('Not implemented');
 }
 
@@ -535,7 +535,7 @@ function getIntegerPartNumber(/* number */) {
 * 1, 2, 3       => 6
 * 0.1, 0.2, 0.3 => 0.6
 */
-function getSummOfNumber(/* x1, x2, x3 */) {
+function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
 }
 
@@ -598,7 +598,7 @@ function getHypotenuse(/* a, b */) {
 * 10 => 5
 * 15 => 8
 */
-function getCountNotEvenNumber(/* number */) {
+function getCountOfOddNumbers(/* number */) {
   throw new Error('Not implemented');
 }
 
@@ -622,11 +622,11 @@ module.exports = {
   isPowerOfTwo,
   getSine,
   numberToStringInBase,
-  isSaveInteger,
+  isSafeInteger,
   roundToLargestInteger,
   roundToSmallestInteger,
   roundToNearestInteger,
-  getSummOfNumber,
+  getSumOfNumbers,
   isNumber,
   isInteger,
   toExponential,
@@ -639,5 +639,5 @@ module.exports = {
   getMaxNumber,
   getRandomInteger,
   getHypotenuse,
-  getCountNotEvenNumber,
+  getCountOfOddNumbers,
 };
