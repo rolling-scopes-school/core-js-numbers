@@ -5,9 +5,7 @@
 However, PRs with the fixes or proposals are welcomed!
 
 ## Task
-The task is to implement functions on different Core JS topics. There are eight modules with different tasks. Each module consists of tasks for specified topic:
-
-2. Numbers
+The task is to implement functions on different Core JS topics. This module requires solving problems involving number operations.
 
 **Active usage of [documentation](https://developer.mozilla.org/en-US/) is strongly recommended!**
 
