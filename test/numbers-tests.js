@@ -248,16 +248,24 @@ describe('core-js-numbers', () => {
   it.optional(
     'isNumber returns a boolean value indicating whether a number or not',
     () => {
-      assert.equal(tasks.isNumber(Infinity), false, 'value 10 is not a number');
-      assert.equal(tasks.isNumber(NaN), false, 'value 10 is not a number');
+      assert.equal(
+        tasks.isNumber(Infinity),
+        false,
+        'value Infinity is not a number'
+      );
+      assert.equal(tasks.isNumber(NaN), false, 'value NaN is not a number');
       assert.equal(tasks.isNumber(0), true, 'value 0 is a number');
-      assert.equal(tasks.isNumber('a' / 1), false, 'value 10 is not a number');
-      assert.equal(tasks.isNumber('a'), false, 'value 10 is not a number');
+      assert.equal(
+        tasks.isNumber('a' / 1),
+        false,
+        "value 'a'/1 is not a number"
+      );
+      assert.equal(tasks.isNumber('a'), false, "value 'a' is not a number");
       assert.equal(tasks.isNumber(5), true, 'value 5 is a number');
-      assert.equal(tasks.isNumber('5'), false, 'value 10 is not a number');
-      assert.equal(tasks.isNumber(null), false, 'value 10 is not a number');
-      assert.equal(tasks.isNumber(''), false, 'value 10 is not a number');
-      assert.equal(tasks.isNumber(true), false, 'value 10 is not a number');
+      assert.equal(tasks.isNumber('5'), false, "value '5' is not a number");
+      assert.equal(tasks.isNumber(null), false, 'value null is not a number');
+      assert.equal(tasks.isNumber(''), false, "value '' is not a number");
+      assert.equal(tasks.isNumber(true), false, 'value true is not a number');
       assert.equal(tasks.isNumber(10), true, 'value 10 is a number');
     }
   );
