@@ -112,6 +112,7 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
 
 /**
  * Returns a last digit of a integer number.
+ * The input parameter will always be greater than or equal to zero.
  *
  * @param {number} value
  * @return {number}
