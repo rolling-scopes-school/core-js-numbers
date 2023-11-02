@@ -445,7 +445,7 @@ function getFloatOnString(/* str */) {
  * '4.567abcdefgh', 10  => 4
  * 'abcdefgh', 10       => NaN
  * '1.234', 2           => 1
- * '10', 8              => 1
+ * '10', 8              => 8
  */
 function getIntegerOnString(/* str, base */) {
   throw new Error('Not implemented');
