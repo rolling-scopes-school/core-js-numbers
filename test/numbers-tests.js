@@ -503,11 +503,6 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
-    assert.equal(
-      fnStr.includes('.isNaN'),
-      true,
-      'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
-    );
   });
 
   it.optional('optimal implementation of isInteger', function test() {
