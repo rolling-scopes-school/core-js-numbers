@@ -34,7 +34,7 @@ The task is to implement functions on different Core JS topics. This module requ
       }
     ```
     Read the task description in the comment above the function. Try to understand the idea. You can see the tests prepared if you don't understand it.
-7. Write your code in `src/*.js`.
+7. Write your code in `src/number-task.js`.
 
     Remove the throwing error line from function body:
     ```javascript
@@ -50,7 +50,8 @@ The task is to implement functions on different Core JS topics. This module requ
 4. Press submit button and enjoy
 
 ## Notes
-* We recommend you to use nodejs of version 14 or lower. If you using any of features that does not supported by node `v14`, score won't be submitted.
+* We recommend you to use nodejs of version 16 or lower. If you using any of features that does not supported by node `v16`, score won't be submitted.
+* Installing nodejs `v16` is optional, you can run jobs using your version and not use methods that are not in nodejs `v16`.
 * Please be sure that each of your test in limit of 30sec.
 * You will get 0 (zero) if you have any eslint's errors or warnings.
 
