@@ -66,7 +66,7 @@ https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
   I'll let you apply some rules when you saving your files in the repo. This plugin will use config-file `.editorconfig` that you can see in the root folder. It lets you save the file with needed line endings, trim whitespaces, etc.
 - Finally, you need to apply linter's autofix feature in order to fix all linebreaks that was already changed to "CLRF":
 ```
-$ npm run lint -- --fix
+$ npm run lint:fix
 ``` 
 
 ___
