@@ -265,15 +265,21 @@ function getCube(num) {
   return num ** 3;
 }
 
-function getFibonacciNumber(index) {
-  if (index === 0) {
-    return 0;
-  }
-  if (index === 1) {
-    return 1;
-  }
-  // Recursively calculate the Fibonacci number
-  return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
+/**
+ * Returns the Fibonacci number located at the index position.
+ *
+ * @param {number} index
+ * @return {number}
+ *
+ * @example:
+ *   0  => 0
+ *   1  => 1
+ *   2  => 1
+ *   3  => 2
+ *   10 => 55
+ */
+function getFibonacciNumber(/* index */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -287,8 +293,8 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(n) {
-  return (n * (n + 1)) / 2;
+function getSumToN(/* n */) {
+  throw new Error('Not implemented');
 }
 
 /**

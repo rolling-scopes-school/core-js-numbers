@@ -287,8 +287,8 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(n) {
-  return (n * (n + 1)) / 2;
+function getSumToN(/* n */) {
+  throw new Error('Not implemented');
 }
 
 /**
