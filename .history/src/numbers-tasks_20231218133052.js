@@ -167,9 +167,8 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(a, b, c) {
-  const diagonalLength = Math.sqrt(a ** 2 + b ** 2 + c ** 2);
-  return diagonalLength;
+function getParallelepipedDiagonal(/* a, b, c */) {
+  throw new Error('Not implemented');
 }
 
 /**
