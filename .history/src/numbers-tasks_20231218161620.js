@@ -634,8 +634,8 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  const positiveNumber = Math.abs(number);
-  const totalCount = Math.floor((positiveNumber + 1) / 2);
+  const totalCount = Math.floor((number + 1) / 2);
+
   return totalCount;
 }
 

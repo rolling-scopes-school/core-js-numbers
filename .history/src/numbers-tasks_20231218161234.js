@@ -633,9 +633,28 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
+
+Certainly! If you want to return a non-negative count even when the input number is negative, you can use Math.max to ensure that the count is at least 0. Here's the modified implementation:
+
+javascript
+Copy code
+/**
+ * Returns count of odd numbers from zero to the resulting number.
+ * The resulting number is taken into account.
+ *
+ * @param {number} number
+ * @return {number}
+ *
+ * @example:
+ * 4  => 2
+ * 5  => 3
+ * 10 => 5
+ * 15 => 8
+ * -2 => 0 (non-negative count for negative input)
+ */
 function getCountOfOddNumbers(number) {
-  const positiveNumber = Math.abs(number);
-  const totalCount = Math.floor((positiveNumber + 1) / 2);
+  // Ensure that the count is non-negative by using Math.max
+  const totalCount = Math.max(0, Math.floor((Math.abs(number) + 1) / 2));
   return totalCount;
 }
 
