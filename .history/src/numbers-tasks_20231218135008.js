@@ -244,10 +244,11 @@ function isPrime(n) {
 function toNumber(value, def) {
   const conertedValue = +value;
 
-  if (!Number.isNaN(conertedValue)) {
+  if (!isNaN(conertedValue)) {
     return conertedValue;
+  } else {
+    return def;
   }
-  return def;
 }
 
 /**

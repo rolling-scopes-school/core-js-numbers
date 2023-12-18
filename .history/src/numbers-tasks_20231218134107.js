@@ -217,7 +217,7 @@ function isPrime(n) {
     return false;
   }
 
-  for (let i = 2; i <= Math.sqrt(n); i += 1) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       return false;
     }
@@ -241,13 +241,8 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(value, def) {
-  const conertedValue = +value;
-
-  if (!Number.isNaN(conertedValue)) {
-    return conertedValue;
-  }
-  return def;
+function toNumber(/* value, def */) {
+  throw new Error('Not implemented');
 }
 
 /**
