@@ -326,7 +326,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num > 0 && Math.log2(num) % 1 === 0;
+  return num > 0 && (num & (num - 1)) === 0;
 }
 
 /**
@@ -339,8 +339,8 @@ function isPowerOfTwo(num) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(num) {
-  return Math.sin(num);
+function getSine(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**

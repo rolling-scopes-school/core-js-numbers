@@ -299,12 +299,11 @@ function getSumToN(n) {
  *
  * @example:
  *   123 => 6  // (1+2+3)
- *
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  const numString = num.toString();
+  numString = num.toString();
 
   let sum = 0;
 
@@ -325,8 +324,8 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(num) {
-  return num > 0 && Math.log2(num) % 1 === 0;
+function isPowerOfTwo(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -339,8 +338,8 @@ function isPowerOfTwo(num) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(num) {
-  return Math.sin(num);
+function getSine(/* num */) {
+  throw new Error('Not implemented');
 }
 
 /**
