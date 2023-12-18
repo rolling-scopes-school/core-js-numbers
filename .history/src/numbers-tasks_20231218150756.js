@@ -461,9 +461,27 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  const isDigit = (char) => char >= '0' && char <= '9';
+
+  let numericPart = '';
+  let decimalPointCount = 0;
+
+  for (const char of str) {
+    if (isDigit(char)) {
+      numericPart += char;
+    } else if (char === '.' && decimalPointCount === 0) {
+      numericPart += char;
+      decimalPointCount += 1;
+    } else {
+      break;
+    }
+  }
+
+  const parsedFloat = numericPart.length > 0 ? Number(numericPart) : NaN;
+  return Number.isNaN(parsedFloat) ? NaN : parsedFloat;
 }
+2;
 
 /**
  * Returns an integer of the specified base or, if the number cannot be parsed

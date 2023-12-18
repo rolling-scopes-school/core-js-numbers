@@ -433,7 +433,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  return typeof number === 'number' && Number.isFinite(number);
+  return typeof number === 'number' && isFinite(number);
 }
 
 /**
@@ -447,8 +447,8 @@ function isNumber(number) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(number) {
-  return Number.isInteger(number);
+function isInteger(/* number */) {
+  throw new Error('Not implemented');
 }
 
 /**
