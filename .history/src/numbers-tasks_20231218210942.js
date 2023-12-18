@@ -462,7 +462,16 @@ function isInteger(number) {
  * 'abcdefgh'      => NaN
  */
 function getFloatOnString(str) {
-  return Number.parseFloat(str);
+  // Try to parse the floating-point number from the beginning of the string
+  const result = parseFloat(str);
+
+  // Check if the parsed result is a valid number
+  if (!isNaN(result)) {
+    return result;
+  } else {
+    // If the result is NaN, return NaN
+    return NaN;
+  }
 }
 
 /**
@@ -479,13 +488,8 @@ function getFloatOnString(str) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(str, base) {
-  const parsedInt = Number.parseInt(str, base);
-
-  if (!Number.isNaN(parsedInt) && Number.isFinite(parsedInt)) {
-    return parsedInt;
-  }
-  return NaN;
+function getIntegerOnString(/* str, base */) {
+  throw new Error('Not implemented');
 }
 
 /**
