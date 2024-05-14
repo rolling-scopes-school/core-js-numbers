@@ -39,7 +39,7 @@ The task is to implement functions on different Core JS topics. This module requ
 
    Read the task description in the comment above the function. Try to understand the idea. You can see the tests prepared if you don't understand it.
 
-7. Write your code in `src/number-task.js`.
+7. Write your code in `src/numbers-tasks.js`.
 
    Remove the throwing error line from function body:
 
@@ -53,10 +53,11 @@ The task is to implement functions on different Core JS topics. This module requ
 
 ## Submit to [rs app](https://app.rs.school/)
 
-1. Open rs app and login
-2. Go to submit task page
-3. Select your task (Core JS Numbers)
-4. Press submit button and enjoy
+1. Commit and push your solutions to your fork
+2. Open rs app and login
+3. Go to submit task page
+4. Select your task (Core JS Numbers)
+5. Press submit button and enjoy
 
 ## Notes
 
