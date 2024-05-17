@@ -10,7 +10,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getRectangleArea),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -23,7 +23,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getCircleCircumference),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -43,7 +43,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getAverage),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -59,7 +59,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getDistanceBetweenPoints),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -73,7 +73,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getLinearEquationRoot),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -88,7 +88,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getAngleBetweenVectors),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -102,7 +102,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getLastDigit),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -115,7 +115,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.parseNumberFromString),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -129,7 +129,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getParallelepipedDiagonal),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -148,7 +148,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToPowerOfTen),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -171,7 +171,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.isPrime),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -186,7 +186,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.toNumber),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -208,7 +208,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getFibonacciNumber),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -229,7 +229,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getSumOfDigits),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -261,7 +261,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.isPowerOfTwo),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -272,7 +272,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getSine),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -289,7 +289,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.numberToStringInBase),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -303,7 +303,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.toExponential),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -316,7 +316,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.toFixed),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -329,7 +329,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.toPrecision),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -343,7 +343,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getNumberValue),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -361,19 +361,19 @@ describe('core-js-numbers', () => {
       assert.equal(
         tasks.isNumber('a' / 1),
         false,
-        "value 'a'/1 is not a number"
+        'value "a"/1 is not a number'
       );
-      assert.equal(tasks.isNumber('a'), false, "value 'a' is not a number");
+      assert.equal(tasks.isNumber('a'), false, 'value "a" is not a number');
       assert.equal(tasks.isNumber(5), true, 'value 5 is a number');
-      assert.equal(tasks.isNumber('5'), false, "value '5' is not a number");
+      assert.equal(tasks.isNumber('5'), false, 'value "5" is not a number');
       assert.equal(tasks.isNumber(null), false, 'value null is not a number');
-      assert.equal(tasks.isNumber(''), false, "value '' is not a number");
+      assert.equal(tasks.isNumber(''), false, 'value "" is not a number');
       assert.equal(tasks.isNumber(true), false, 'value true is not a number');
       assert.equal(tasks.isNumber(10), true, 'value 10 is a number');
       assert.equal(
         forbidden.isCommented(tasks.isNumber),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -392,7 +392,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.isInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -404,7 +404,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getFloatOnString),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -418,7 +418,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getIntegerOnString),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -440,7 +440,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.isSafeInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -453,7 +453,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToSmallestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -466,7 +466,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToLargestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -480,7 +480,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToNearestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -494,7 +494,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getIntegerPartNumber),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -505,7 +505,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getSumOfNumbers),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -516,7 +516,7 @@ describe('core-js-numbers', () => {
     assert.equal(
       forbidden.isCommented(tasks.getMaxNumber),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -541,7 +541,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getRandomInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -558,7 +558,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getHypotenuse),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -577,7 +577,7 @@ describe('core-js-numbers', () => {
       assert.equal(
         forbidden.isCommented(tasks.getCountOfOddNumbers),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -597,7 +597,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getCube),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -614,7 +614,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getSine),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -633,7 +633,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       assert.equal(
         forbidden.isCommented(tasks.numberToStringInBase),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -651,7 +651,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.toExponential),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -668,7 +668,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.toFixed),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -685,7 +685,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.toPrecision),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -702,7 +702,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getNumberValue),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -719,7 +719,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.isNumber),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -736,7 +736,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.isInteger),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -753,7 +753,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getFloatOnString),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -770,7 +770,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getIntegerOnString),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -787,7 +787,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.isSafeInteger),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -806,7 +806,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToSmallestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -826,7 +826,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToLargestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -846,7 +846,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       assert.equal(
         forbidden.isCommented(tasks.roundToNearestInteger),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -866,7 +866,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       assert.equal(
         forbidden.isCommented(tasks.getIntegerPartNumber),
         false,
-        `Be sure to remove comments from the final solution`
+        'Be sure to remove comments from the final solution'
       );
     }
   );
@@ -884,7 +884,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getMaxNumber),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -901,7 +901,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getHypotenuse),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 
@@ -918,7 +918,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     assert.equal(
       forbidden.isCommented(tasks.getLastDigit),
       false,
-      `Be sure to remove comments from the final solution`
+      'Be sure to remove comments from the final solution'
     );
   });
 });
