@@ -203,7 +203,7 @@ function roundToPowerOfTen(a, b) {
  *   16 => false
  *   17 => true
  */
-function isPrime(/* n */) {
+function isPrime() {
   throw new Error('Not implemented');
 }
 
@@ -237,8 +237,8 @@ function toNumber(/* value, def */) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
