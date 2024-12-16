@@ -24,6 +24,8 @@ function getRectangleArea(/* width, height */) {
 
 // тестовый комментарий 
 /**
+ * // тестовый комментарий 
+/**
  * Returns a circumference of circle given by radius.
  *
  * @param {number} radius
