@@ -8,6 +8,10 @@
  ******************************************************************************************* */
 
 // тествый комит 
+// тествый комит 
+/**
+ * // тествый комит 
+// тествый комит 
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -50,6 +54,14 @@ function getCircleCircumference(/* radius */) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
+// *   5, 5  => 5
+// *  10, 0  => 5
+// *  -3, 3  => 0
+// */
+// *   5, 5  => 5
+// *  10, 0  => 5
+// *  -3, 3  => 0
+// */
 function getAverage(/* value1, value2 */) {
   throw new Error('Not implemented');
 }
