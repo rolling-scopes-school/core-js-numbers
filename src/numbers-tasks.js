@@ -6,12 +6,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
  *                                                                                           *
  ******************************************************************************************* */
-
-// тествый комит 
-// тествый комит 
-/**
- * // тествый комит 
-// тествый комит 
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -23,8 +17,8 @@
  *   5, 10 => 50
  *   5, 5  => 25
  */
-function getRectangleArea(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleArea(a, b) {
+  return a * b;
 }
 
 /**
