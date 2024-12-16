@@ -50,11 +50,6 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  if (Number.isFinite(value1) && Number.isFinite(value2)) {
-    return (value1 + value2) / 2;
-  }
-
-  // Handle potential overflow or underflow
   return value1 / 2 + value2 / 2;
 }
 
@@ -265,7 +260,7 @@ function toNumber(value, def = 0) {
  *   0  => 0
  */
 function getCube(num) {
-  return num * num * num;
+  return num ** 3;
 }
 
 /**
@@ -469,12 +464,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  return (
-    typeof number === 'number' &&
-    !Number.isNaN(number) &&
-    number !== Infinity &&
-    number !== -Infinity
-  );
+  return Number.isFinite(number);
 }
 
 /**
@@ -503,7 +493,7 @@ function isInteger(number) {
  * 'abcdefgh'      => NaN
  */
 function getFloatOnString(str) {
-  return parseFloat(str);
+  return Number.parseFloat(str);
 }
 
 /**
@@ -521,7 +511,7 @@ function getFloatOnString(str) {
  * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
-  return parseInt(str, base);
+  return Number.parseInt(str, base);
 }
 
 /**
@@ -610,7 +600,8 @@ function getIntegerPartNumber(number) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(x1, x2, x3) {
-  return x1 + x2 + x3;
+  const sum = x1 + x2 + x3;
+  return Math.round(sum * 10) / 10;
 }
 
 /**
@@ -656,10 +647,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  const angle = Math.atan(b / a);
-  const result = a / Math.cos(angle);
-  const epsilon = 1e-10;
-  return Math.abs(result - 5) < epsilon;
+  return Math.hypot(a, b);
 }
 
 /**
@@ -676,18 +664,16 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  if (number < 0) {
-    return 0;
+  const number2 = Math.abs(number);
+
+  let sum = 0;
+  for (let i = 0; i < number2; i += 1) {
+    if (!(i % 2)) {
+      sum += 1;
+    }
   }
-
-  // Формула n-го члена арифметической прогрессии
-  // Для нечетных чисел: a_n = 1 + (n - 1) * 2
-  // Решаем уравнение: 1 + (n - 1) * 2 <= number
-  // n <= (number + 1) / 2
-
-  return Math.floor((number + 1) / 2);
+  return sum;
 }
-
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
