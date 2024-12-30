@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/core-js-numbers/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/core-js-numbers#readme"
+  "homepage": "https://github.com/rolling-scopes-school/core-js-numbers#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
