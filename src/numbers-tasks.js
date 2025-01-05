@@ -300,9 +300,10 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   let sum = 0;
   while (num !== 0) {
+    let number = num;
     const last = num % 10;
     sum += last;
-    num = Math.floor(num / 10);
+    number = Math.floor(number / 10);
   }
   return sum;
 }
@@ -407,7 +408,8 @@ function toPrecision(number, precision) {
  * Number(-5)    => -5
  */
 function getNumberValue(number) {
-  return parseInt(number);
+  // return parseInt(number);
+  return parseInt(number, 10);
 }
 
 /**
