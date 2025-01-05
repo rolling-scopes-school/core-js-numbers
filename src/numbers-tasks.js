@@ -298,7 +298,7 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(num) {
+function getSumOfDigits(/* num */) {
   throw new Error('Not implemented');
 }
 /**
@@ -629,7 +629,7 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(number) {
+function getCountOfOddNumbers(/* number */) {
   throw new Error('Not implemented');
 }
 module.exports = {
