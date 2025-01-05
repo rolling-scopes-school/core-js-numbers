@@ -298,16 +298,16 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(num) {
-  let sum = 0;
-  while (num !== 0) {
-    let number = num;
-    const last = num % 10;
-    sum += last;
-    number = Math.floor(number / 10);
-  }
-  return sum;
-}
+// function getSumOfDigits(num) {
+//   let sum = 0;
+//   while (num !== 0) {
+//     let number = num;
+//     const last = num % 10;
+//     sum += last;
+//     number = Math.floor(number / 10);
+//   }
+//   return sum;
+// }
 /**
  * Returns true if the given number is a power of two, false otherwise.
  *
@@ -636,12 +636,12 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(number) {
-  if (number === 0) return 0;
-  return number % 2 === 0
-    ? getCountOfOddNumbers(number - 1)
-    : getCountOfOddNumbers(number - 1) + 1;
-}
+// function getCountOfOddNumbers(number) {
+//   if (number === 0) return 0;
+//   return number % 2 === 0
+//     ? getCountOfOddNumbers(number - 1)
+//     : getCountOfOddNumbers(number - 1) + 1;
+// }
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
