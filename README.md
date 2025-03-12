@@ -61,8 +61,8 @@ The task is to implement functions on different Core JS topics. This module requ
 
 ## Notes
 
-- We recommend you to use nodejs of version 16 or lower. If you using any of features that does not supported by node `v16`, score won't be submitted.
-- Installing nodejs `v16` is optional, you can run jobs using your version and not use methods that are not in nodejs `v16`.
+- We recommend you to use nodejs of version 22 or lower. If you using any of features that does not supported by node `v22`, score won't be submitted.
+- Installing nodejs `v22` is optional, you can run jobs using your version and not use methods that are not in nodejs `v22`.
 - Please be sure that each of your test in limit of 30sec.
 - You will get 0 (zero) if you have any eslint's errors or warnings.
 
