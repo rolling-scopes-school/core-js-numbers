@@ -60,7 +60,6 @@ function getAverage(/* value1, value2 */) {
  * @param {number} y1
  * @param {number} x2
  * @param {number} y2
- *
  * @return {number}
  *
  * @example:
@@ -184,7 +183,7 @@ function roundToPowerOfTen(/* num, pow */) {
  * See: https://en.wikipedia.org/wiki/Primality_test
  *
  * @param {number} n
- * @return {bool}
+ * @return {boolean}
  *
  * @example:
  *   4 => false
@@ -373,7 +372,7 @@ function toPrecision(/* number, precision */) {
 /**
  * Returns the primitive value of a Number object.
  *
- * @param {Number} number
+ * @param {number} number
  * @return {number}
  *
  * @example:
