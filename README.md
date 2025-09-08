@@ -20,26 +20,31 @@ The task is to implement functions on different Core JS topics. This module requ
 6. Each task is usually a regular function:
 
    ```javascript
-   /**
-    * Returns the result of concatenation of two strings.
-    *
-    * @param {string} value1
-    * @param {string} value2
-    * @return {string}
-    *
-    * @example
-    *   'aa', 'bb' => 'aabb'
-    *   'aa',''    => 'aa'
-    *   '',  'bb'  => 'bb'
-    */
-   function concatenateStrings(value1, value2) {
-     throw new Error('Not implemented');
-   }
+  /**
+  * Returns an area of a rectangle given by width and height.
+  *
+  * @param {number} width
+  * @param {number} height
+  * @return {number}
+  *
+  * @example:
+  *   5, 10 => 50
+  *   5, 5  => 25
+  */
+  function getRectangleArea(/* width, height */) {
+    throw new Error('Not implemented');
+  }
    ```
 
    Read the task description in the comment above the function. Try to understand the idea. You can see the tests prepared if you don't understand it.
 
 7. Write your code in `src/numbers-tasks.js`.
+
+   Uncomment the incoming parameters:
+
+   ```javascript
+   function getRectangleArea(/* width, height */)
+   ```
 
    Remove the throwing error line from function body:
 
