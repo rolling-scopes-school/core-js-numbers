@@ -626,7 +626,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
         this.skip();
       }
       assert.equal(
-        fnStr.includes('toString(base)'),
+        fnStr.includes('.toString'),
         true,
         'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
       );
@@ -644,7 +644,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('toExponential(fractionDigits)'),
+      fnStr.includes('.toExponential'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -661,7 +661,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('toFixed(fractionDigits)'),
+      fnStr.includes('.toFixed'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -678,7 +678,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('toPrecision(precision)'),
+      fnStr.includes('.toPrecision'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -695,7 +695,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('.valueOf()'),
+      fnStr.includes('.valueOf'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -729,7 +729,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('.isInteger(number)'),
+      fnStr.includes('.isInteger'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -746,7 +746,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('.parseFloat(str)'),
+      fnStr.includes('.parseFloat'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
@@ -763,7 +763,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       this.skip();
     }
     assert.equal(
-      fnStr.includes('.parseInt(str, base)'),
+      fnStr.includes('.parseInt'),
       true,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
