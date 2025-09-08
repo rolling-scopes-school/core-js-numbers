@@ -15,10 +15,11 @@
   "author": "aorgish, mikhama, valerydluski",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "mocha": "^6.2.2"
+    "mocha": "^11.7.2",
+    "prettier": "^3.6.2"
   },
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/core-js-numbers/issues"
