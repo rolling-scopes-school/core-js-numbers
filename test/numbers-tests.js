@@ -385,63 +385,138 @@ describe('02-numbers-tasks', () => {
 
 describe('02-numbers-tasks optimal implementation tests', () => {
   it.optional('optimal implementation of getCube', () => {
-    assert.equal(tasks.getCube.toString().includes('**'), true);
+    assert.equal(tasks.getCube(3), 27);
+    assert.equal(
+      tasks.getCube.toString().includes('**'),
+      true,
+      'find the operator performing this action in the documentation',
+    );
   });
 
   it.optional('optimal implementation of getSine', () => {
-    assert.equal(tasks.getSine.toString().includes('Math.sin'), true);
+    assert.equal(tasks.getSine(0), 0);
+    assert.equal(
+      tasks.getSine.toString().includes('Math.sin'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of numberToStringInBase', () => {
-    assert.equal(tasks.numberToStringInBase.toString().includes('toString(base)'), true);
+    assert.equal(tasks.numberToStringInBase(255, 16), 'ff');
+    assert.equal(
+      tasks.numberToStringInBase.toString().includes('toString'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of toExponential', () => {
-    assert.equal(tasks.toExponential.toString().includes('toExponential(fractionDigits)'), true);
+    assert.equal(tasks.toExponential(12345, 2), '1.23e+4');
+    assert.equal(
+      tasks.toExponential.toString().includes('toExponential'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of toFixed', () => {
-    assert.equal(tasks.toFixed.toString().includes('toFixed(fractionDigits)'), true);
+    assert.equal(tasks.toFixed(12345, 2), 12345.00);
+    assert.equal(
+      tasks.toFixed.toString().includes('toFixed'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of toPrecision', () => {
-    assert.equal(tasks.toPrecision.toString().includes('toPrecision(precision)'), true);
+    assert.equal(tasks.toPrecision(12345, 7), 12345.00);
+    assert.equal(
+      tasks.toPrecision.toString().includes('toPrecision'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of getNumberValue', () => {
-    assert.equal(tasks.getNumberValue.toString().includes('.valueOf()'), true);
+    assert.equal(tasks.getNumberValue(Number(5)), 5);
+    assert.equal(
+      tasks.getNumberValue.toString().includes('.valueOf'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of isNumber', () => {
+    assert.equal(tasks.isNumber(0), true, '0 is a number');
     assert.equal(tasks.isNumber.toString().includes('.isFinite'), true);
-    assert.equal(tasks.isNumber.toString().includes('.isNaN'), true);
+    assert.equal(
+      tasks.isNumber.toString().includes('.isNaN'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of isInteger', () => {
-    assert.equal(tasks.isInteger.toString().includes('.isInteger(number)'), true);
+    assert.equal(tasks.isInteger(5), true, '5 is an integer');
+    assert.equal(
+      tasks.isInteger.toString().includes('.isInteger'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of getFloatOnString', () => {
-    assert.equal(tasks.getFloatOnString.toString().includes('.parseFloat(str)'), true);
+    assert.equal(tasks.getFloatOnString('4.567abcdefgh'), 4.567);
+    assert.equal(
+      tasks.getFloatOnString.toString().includes('.parseFloat'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of getIntegerOnString', () => {
-    assert.equal(tasks.getIntegerOnString.toString().includes('.parseInt(str, base)'), true);
+    assert.equal(tasks.getIntegerOnString('4.567abcdefgh', 10), 4);
+    assert.equal(
+      tasks.getIntegerOnString.toString().includes('.parseInt'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of roundToSmallestInteger', () => {
-    assert.equal(tasks.roundToSmallestInteger.toString().includes('Math.floor'), true);
+    assert.equal(tasks.roundToSmallestInteger(5.9), 5);
+    assert.equal(
+      tasks.roundToSmallestInteger.toString().includes('Math.floor'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of roundToLargestInteger', () => {
-    assert.equal(tasks.roundToLargestInteger.toString().includes('Math.ceil'), true);
+    assert.equal(tasks.roundToLargestInteger(5.1), 6);
+    assert.equal(
+      tasks.roundToLargestInteger.toString().includes('Math.ceil'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of roundToNearestInteger', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.round'), true);
+    assert.equal(tasks.roundToNearestInteger(5.5), 5);
+    assert.equal(
+      tasks.roundToNearestInteger.toString().includes('Math.round'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 
   it.optional('optimal implementation of getIntegerPartNumber', () => {
-    assert.equal(tasks.roundToNearestInteger.toString().includes('Math.trunc'), true);
+    assert.equal(tasks.roundToNearestInteger(5.5), 5);
+    assert.equal(
+      tasks.roundToNearestInteger.toString().includes('Math.trunc'),
+      true,
+      'find in the documentation a class method that allows you to solve the problem in one step',
+    );
   });
 });
