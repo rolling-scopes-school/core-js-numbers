@@ -8,7 +8,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getRectangleArea(5, 10), 50);
     assert.equal(tasks.getRectangleArea(5, 5), 25);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getRectangleArea),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -19,7 +19,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getCircleCircumference(3.14), 19.729201864543903);
     assert.equal(tasks.getCircleCircumference(0), 0);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getCircleCircumference),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -32,7 +32,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE), Number.MAX_VALUE - 1);
     assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getAverage),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -43,7 +43,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 1, 0), 1);
     assert.equal(tasks.getDistanceBetweenPoints(-5, 0, 10, -10), 18.027756377319946);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getDistanceBetweenPoints),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -54,7 +54,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getLinearEquationRoot(1, 8), -8);
     assert.equal(tasks.getLinearEquationRoot(5, 0), 0);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getLinearEquationRoot),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -66,7 +66,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getAngleBetweenVectors(0, -1, 1, 0), Math.PI / 2);
     assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, 1), 0);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getAngleBetweenVectors),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -78,7 +78,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getLastDigit(5), 5);
     assert.equal(tasks.getLastDigit(0), 0);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getLastDigit),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -89,7 +89,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.parseNumberFromString('37'), 37);
     assert.equal(tasks.parseNumberFromString('-525.5'), -525.5);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.parseNumberFromString),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -100,7 +100,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getParallelepipedDiagonal(3, 3, 3), Math.sqrt(27));
     assert.equal(tasks.getParallelepipedDiagonal(1, 2, 3), Math.sqrt(14));
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getParallelepipedDiagonal),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -116,7 +116,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToPowerOfTen(9678, 2), 9700);
     assert.equal(tasks.roundToPowerOfTen(9678, 3), 10000);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.roundToPowerOfTen),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -138,7 +138,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.isPrime(113), true, '113');
     assert.equal(tasks.isPrime(119), false, '119');
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.isPrime),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -153,7 +153,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.toNumber(new Number(42), 0), 42);
     assert.equal(tasks.toNumber(undefined, -1), -1);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.toNumber),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -164,7 +164,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getCube(-2), -8);
     assert.equal(tasks.getCube(0), 0);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getCube),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -177,7 +177,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getFibonacciNumber(3), 2);
     assert.equal(tasks.getFibonacciNumber(10), 55);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getFibonacciNumber),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -188,7 +188,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getSumToN(10), 55);
     assert.equal(tasks.getSumToN(1), 1);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getSumToN),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -200,7 +200,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getSumOfDigits(5), 5);
     assert.equal(tasks.getSumOfDigits(101010101010), 6);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getSumOfDigits),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -213,7 +213,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.isPowerOfTwo(-512), true);
     assert.equal(tasks.isPowerOfTwo(1000), false);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.isPowerOfTwo),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -223,7 +223,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getSine(0), 0);
     assert.equal(tasks.getSine(Math.PI / 2), 1);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getSine),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -238,7 +238,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.numberToStringInBase(123, 10), '123');
     assert.equal(tasks.numberToStringInBase(999, 16), '3e7');
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.numberToStringInBase),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -249,7 +249,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.toExponential(-12345, 3), '-1.235e+4');
     assert.equal(tasks.toExponential(12345, 1), '1.2e+4');
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.toExponential),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -259,7 +259,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.toFixed(12345, 2), 12345.00);
     assert.equal(tasks.toFixed(12.345, 1), 12.3);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.toFixed),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -269,7 +269,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.toPrecision(12345, 7), 12345.00);
     assert.equal(tasks.toPrecision(12.345, 4), 12.35);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.toPrecision),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -280,7 +280,7 @@ describe('02-numbers-tasks', () => {
     // eslint-disable-next-line no-new-wrappers
     assert.equal(tasks.getNumberValue(new Number(-5)), -5);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getNumberValue),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -299,7 +299,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.isNumber(true), false);
     assert.equal(tasks.isNumber(10), true);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.isNumber),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -311,7 +311,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.isInteger('5'), false);
     assert.equal(tasks.isInteger(3 / 2), false);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.isInteger),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -322,7 +322,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getFloatOnString('4.567abcdefgh123'), 4.567);
     assert.equal(tasks.getFloatOnString('abcdefgh'), NaN);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getFloatOnString),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -334,7 +334,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getIntegerOnString('1.234', 2), 1);
     assert.equal(tasks.getIntegerOnString('10', 8), 8);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.getIntegerOnString),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -344,7 +344,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToSmallestInteger(5.9), 5);
     assert.equal(tasks.roundToSmallestInteger(-5.1), -6);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.roundToSmallestInteger),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -354,7 +354,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToLargestInteger(5.1), 6);
     assert.equal(tasks.roundToLargestInteger(-5.9), -5);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.roundToLargestInteger),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -365,7 +365,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToNearestInteger(5.4), 5);
     assert.equal(tasks.roundToNearestInteger(-5.5), -5);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.roundToNearestInteger),
       false,
       'Be sure to remove comments from the final solution',
     );
@@ -376,7 +376,7 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.roundToNearestInteger(5.4), 5);
     assert.equal(tasks.roundToNearestInteger(-5.5), -5);
     assert.equal(
-      forbidden.isCommented(tasks.getNearestBigger),
+      forbidden.isCommented(tasks.roundToNearestInteger),
       false,
       'Be sure to remove comments from the final solution',
     );
