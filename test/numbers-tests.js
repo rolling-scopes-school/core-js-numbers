@@ -123,20 +123,20 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isPrime should return true if specified number is prime', () => {
-    assert.equal(tasks.isPrime(2), true, '2');
-    assert.equal(tasks.isPrime(3), true, '3');
-    assert.equal(tasks.isPrime(4), false, '4');
-    assert.equal(tasks.isPrime(5), true, '5');
-    assert.equal(tasks.isPrime(6), false, '6');
-    assert.equal(tasks.isPrime(7), true, '7');
-    assert.equal(tasks.isPrime(8), false, '8');
-    assert.equal(tasks.isPrime(9), false, '9');
-    assert.equal(tasks.isPrime(10), false, '10');
-    assert.equal(tasks.isPrime(11), true, '11');
-    assert.equal(tasks.isPrime(12), false, '12');
-    assert.equal(tasks.isPrime(13), true, '13');
-    assert.equal(tasks.isPrime(113), true, '113');
-    assert.equal(tasks.isPrime(119), false, '119');
+    assert.equal(tasks.isPrime(2), true, '2', '2 is a prime number');
+    assert.equal(tasks.isPrime(3), true, '3', '3 is a prime number');
+    assert.equal(tasks.isPrime(4), false, '4', '4 is not a prime number');
+    assert.equal(tasks.isPrime(5), true, '5', '5 is a prime number');
+    assert.equal(tasks.isPrime(6), false, '6', '6 is not a prime number');
+    assert.equal(tasks.isPrime(7), true, '7', '7 is a prime number');
+    assert.equal(tasks.isPrime(8), false, '8', '8 is not a prime number');
+    assert.equal(tasks.isPrime(9), false, '9', '9 is not a prime number');
+    assert.equal(tasks.isPrime(10), false, '10', '10 is not a prime number');
+    assert.equal(tasks.isPrime(11), true, '11', '11 is a prime number');
+    assert.equal(tasks.isPrime(12), false, '12', '12 is not a prime number');
+    assert.equal(tasks.isPrime(13), true, '13', '13 is a prime number');
+    assert.equal(tasks.isPrime(113), true, '113', '113 is a prime number');
+    assert.equal(tasks.isPrime(119), false, '119', '119 is not a prime number');
     assert.equal(
       forbidden.isCommented(tasks.isPrime),
       false,
@@ -207,11 +207,11 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isPowerOfTwo returns true if the given number is a power of two, false otherwise', () => {
-    assert.equal(tasks.isPowerOfTwo(4), true);
-    assert.equal(tasks.isPowerOfTwo(16), true);
-    assert.equal(tasks.isPowerOfTwo(15), false);
-    assert.equal(tasks.isPowerOfTwo(-512), true);
-    assert.equal(tasks.isPowerOfTwo(1000), false);
+    assert.equal(tasks.isPowerOfTwo(4), true, '4 is a power of 2');
+    assert.equal(tasks.isPowerOfTwo(16), true, '16 is a power of 2');
+    assert.equal(tasks.isPowerOfTwo(15), false, '15 is not a power of 2');
+    assert.equal(tasks.isPowerOfTwo(-512), false, '-512 is not a power of 2');
+    assert.equal(tasks.isPowerOfTwo(1000), false, '1000 is not a power of 2');
     assert.equal(
       forbidden.isCommented(tasks.isPowerOfTwo),
       false,
@@ -287,17 +287,17 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isNumber returns a boolean value indicating whether a number or not', () => {
-    assert.equal(tasks.isNumber(Infinity), false);
-    assert.equal(tasks.isNumber(NaN), false);
-    assert.equal(tasks.isNumber(0), true);
-    assert.equal(tasks.isNumber('a' / 1), false);
-    assert.equal(tasks.isNumber('a'), false);
-    assert.equal(tasks.isNumber(5), true);
-    assert.equal(tasks.isNumber('5'), false);
-    assert.equal(tasks.isNumber(null), false);
-    assert.equal(tasks.isNumber(''), false);
-    assert.equal(tasks.isNumber(true), false);
-    assert.equal(tasks.isNumber(10), true);
+    assert.equal(tasks.isNumber(Infinity), false, 'Infinity is not a number');
+    assert.equal(tasks.isNumber(NaN), false, 'NaN is not a number');
+    assert.equal(tasks.isNumber(0), true, '0 is a number');
+    assert.equal(tasks.isNumber('a' / 1), false, 'a/1 is not a number');
+    assert.equal(tasks.isNumber('a'), false, 'a is not a number');
+    assert.equal(tasks.isNumber(5), true, '5 is a number');
+    assert.equal(tasks.isNumber('5'), false, 'string value 5 is not a number');
+    assert.equal(tasks.isNumber(null), false, 'null is not a number');
+    assert.equal(tasks.isNumber(''), false, 'empty value is not a number');
+    assert.equal(tasks.isNumber(true), false, 'true is not a number');
+    assert.equal(tasks.isNumber(10), true, '10 is a number');
     assert.equal(
       forbidden.isCommented(tasks.isNumber),
       false,
@@ -306,10 +306,10 @@ describe('02-numbers-tasks', () => {
   });
 
   it.optional('isInteger returns a boolean value indicating whether a number is an integer or not', () => {
-    assert.equal(tasks.isInteger(5), true);
-    assert.equal(tasks.isInteger(5.1), false);
-    assert.equal(tasks.isInteger('5'), false);
-    assert.equal(tasks.isInteger(3 / 2), false);
+    assert.equal(tasks.isInteger(5), true, '5 is an integer');
+    assert.equal(tasks.isInteger(5.1), false, '5.1 is not an integer');
+    assert.equal(tasks.isInteger('5'), false, 'string value 5 is not an integer');
+    assert.equal(tasks.isInteger(3 / 2), false, '3/2 is not an integer');
     assert.equal(
       forbidden.isCommented(tasks.isInteger),
       false,
