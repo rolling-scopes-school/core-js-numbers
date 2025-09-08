@@ -589,6 +589,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getCube(3), 27);
     assert.equal(
       fnStr.includes('**'),
       true,
@@ -606,6 +607,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getSine(0), 0);
     assert.equal(
       fnStr.includes('Math.sin'),
       true,
@@ -625,6 +627,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       if (!fnStr.includes('return')) {
         this.skip();
       }
+      assert.equal(tasks.numberToStringInBase(255, 16), 'ff');
       assert.equal(
         fnStr.includes('.toString'),
         true,
@@ -643,6 +646,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.toExponential(12345, 2), '1.23e+4');
     assert.equal(
       fnStr.includes('.toExponential'),
       true,
@@ -660,6 +664,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.toFixed(12345, 2), 12345.0);
     assert.equal(
       fnStr.includes('.toFixed'),
       true,
@@ -677,6 +682,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.toPrecision(12345, 7), 12345.0);
     assert.equal(
       fnStr.includes('.toPrecision'),
       true,
@@ -694,6 +700,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getNumberValue(Number(5)), 5);
     assert.equal(
       fnStr.includes('.valueOf'),
       true,
@@ -711,6 +718,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.isNumber('5'), false, 'value "5" is not a number');
     assert.equal(
       fnStr.includes('.isFinite'),
       true,
@@ -728,6 +736,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.isInteger('5'), false, 'value "5" is not an integer');
     assert.equal(
       fnStr.includes('.isInteger'),
       true,
@@ -745,6 +754,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getFloatOnString('4.567abcdefgh123'), 4.567);
     assert.equal(
       fnStr.includes('.parseFloat'),
       true,
@@ -762,6 +772,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getIntegerOnString('4.567abcdefgh', 10), 4);
     assert.equal(
       fnStr.includes('.parseInt'),
       true,
@@ -779,6 +790,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.isSafeInteger(10), true, 'value 10 is a safe integer');
     assert.equal(
       fnStr.includes('.isSafeInteger'),
       true,
@@ -798,6 +810,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       if (!fnStr.includes('return')) {
         this.skip();
       }
+      assert.equal(tasks.roundToSmallestInteger(5.9), 5);
       assert.equal(
         fnStr.includes('Math.floor'),
         true,
@@ -818,6 +831,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       if (!fnStr.includes('return')) {
         this.skip();
       }
+      assert.equal(tasks.roundToLargestInteger(5.1), 6);
       assert.equal(
         fnStr.includes('Math.ceil'),
         true,
@@ -838,6 +852,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       if (!fnStr.includes('return')) {
         this.skip();
       }
+      assert.equal(tasks.roundToNearestInteger(5.5), 6);
       assert.equal(
         fnStr.includes('Math.round'),
         true,
@@ -858,6 +873,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
       if (!fnStr.includes('return')) {
         this.skip();
       }
+      assert.equal(tasks.getIntegerPartNumber(5.5), 5);
       assert.equal(
         fnStr.includes('Math.trunc'),
         true,
@@ -876,6 +892,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getMaxNumber(1, 2), 2);
     assert.equal(
       fnStr.includes('Math.max'),
       true,
@@ -893,6 +910,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getHypotenuse(3, 4), 5);
     assert.equal(
       fnStr.includes('Math.hypot'),
       true,
@@ -910,6 +928,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     if (!fnStr.includes('return')) {
       this.skip();
     }
+    assert.equal(tasks.getLastDigit(37), 7);
     assert.equal(
       fnStr.includes('%'),
       true,
