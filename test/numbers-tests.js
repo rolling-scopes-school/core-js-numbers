@@ -216,6 +216,11 @@ describe('core-js-numbers', () => {
     assert.equal(tasks.getCube(3), 27);
     assert.equal(tasks.getCube(-2), -8);
     assert.equal(tasks.getCube(0), 0);
+    assert.equal(
+      forbidden.isCommented(tasks.getCube),
+      false,
+      'Be sure to remove comments from the final solution'
+    );
     getCubeSuccess = true;
   });
 
@@ -239,6 +244,11 @@ describe('core-js-numbers', () => {
     assert.equal(tasks.getSumToN(5), 15);
     assert.equal(tasks.getSumToN(10), 55);
     assert.equal(tasks.getSumToN(1), 1);
+    assert.equal(
+      forbidden.isCommented(tasks.getSumToN),
+      false,
+      'Be sure to remove comments from the final solution'
+    );
   });
 
   it.optional(
