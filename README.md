@@ -74,20 +74,18 @@ The task is to implement functions on different Core JS topics. This module requ
 ## FAQ
 
 **Question:** I use Windows machine and have received a lot of errors like "Expected linebreaks to be 'LF' but found 'CRLF'". How to handle it?
-
 **Answer**:
-
 - First, you need to install Gitbash properly: you need to choose option "Checkout as-is, commit as-is" in section "Configuring the line ending conversions". It'll let you download repos with line endings set "as-is" as well as commit. In other words, not to change them at all, because by default it converts them.
 - Second, install `editorconfig` plugin to your editor. For VS Code you can find it here:
   <https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig>
-
   I'll let you apply some rules when you saving your files in the repo. This plugin will use config-file `.editorconfig` that you can see in the root folder. It lets you save the file with needed line endings, trim whitespaces, etc.
-
 - Finally, you need to apply linter's autofix feature in order to fix all linebreaks that was already changed to "CLRF":
-
   ```sh
   npm run lint:fix
   ```
+
+**Question:** The solution in the local repository succeeds and all tests are "green", but in the application some tests don't count. What to do?<br>
+**Answer**: [Update your repository fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork), update the local repository from the fork, run tests and fix your solution. After fixing, resubmit your solution for testing.
 
 ---
 
